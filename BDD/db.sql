@@ -4,7 +4,7 @@ USE Recettes;
 -- Table des utilisateurs
 CREATE TABLE users (
     ID INT PRIMARY KEY AUTO_INCREMENT,
-    Nom VARCHAR(50),
+    Nom VARCHAR(50)
 );
 
 -- Table des recettes

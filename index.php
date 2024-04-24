@@ -13,18 +13,17 @@
                 <?php
                 include 'php/config.php';
 
-                // Sélectionner toutes les recettes depuis la base de données
                 $sql = "SELECT * FROM recettes";
                 $result = $connexion->query($sql);
 
                 if ($result->num_rows > 0) {
-                    // Afficher les données de chaque recette
+
                     while($row = $result->fetch_assoc()) {
                         echo "<li>";
-                        echo "<strong>Titre:</strong> " . $row["Titre"] . "<br>";
-                        echo "<strong>Description:</strong><br>";
+                        echo "<h3>Titre:</h3> " . $row["Titre"];
+                        echo "<h4>Description:</h4>";
                         echo "<div class='description'>";
-                        echo "<span>" . $row["Description"] . "</span><br>";
+                        echo "<span>" . $row["Description"] . "</span>";
                         echo "</div>";
                         echo "</li>";
                     }
@@ -32,7 +31,6 @@
                     echo "<li>Aucune recette trouvée.</li>";
                 }
 
-                // Fermer la connexion à la base de données
                 $connexion->close();
                 ?>
             </ul>
