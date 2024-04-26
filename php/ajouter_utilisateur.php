@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter un utilisateur</title>
-    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <h1>Ajouter un utilisateur</h1>
@@ -15,7 +15,7 @@
     </form>
 
     <?php
-    include 'config.php';
+    include '../config/config.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 

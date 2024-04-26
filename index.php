@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des recettes</title>
-    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="container">
         <h1>Liste des recettes</h1>
         <ul>
             <?php
-            include 'php/config.php';
+            include 'config/config.php';
 
             $sql = "SELECT r.ID, r.Titre, r.Description, u.Nom AS CreateurNom FROM recettes r
                     INNER JOIN users u ON r.Createur_ID = u.ID";

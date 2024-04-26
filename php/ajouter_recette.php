@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter une recette</title>
-    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <h1>Ajouter une recette</h1>
@@ -20,7 +20,7 @@
                 <select name="ingredient[]" class="ingredient" required>
                 <option>Choisissez un ingrédient</option>
                     <?php
-                    include 'config.php';
+                    include '../config/config.php';
 
                     $sqlIngredients = "SELECT * FROM ingredients";
                     $resultIngredients = $connexion->query($sqlIngredients);
@@ -77,7 +77,7 @@
         <input type="submit" value="Ajouter">
 
         <?php
-        include 'config.php';
+        include '../config/config.php';
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $titre = $_POST['titre'];

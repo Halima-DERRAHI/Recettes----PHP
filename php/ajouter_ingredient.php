@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $newIngredient = $_POST["newIngredient"];
         
-        include 'config.php';
+        include '../config/config.php';
 
         $sql = "INSERT INTO ingredients (Nom) VALUES (?)";
 
